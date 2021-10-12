@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=["POST"])
 def ordened_list():
     return {
-        "data": sorted(request.json, reverse=True, key=lambda x: x['puntuacion'])
+        "data": sorted(request.json, reverse=True, key=lambda x: x['max_score'])
     }
 
 
